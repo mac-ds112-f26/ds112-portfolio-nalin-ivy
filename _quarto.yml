@@ -32,6 +32,8 @@ website:
         text: Portfolio
       - href: diary.qmd
         text: Diary
+      - href: ica
+        text: In-Class Activities
 
   search: true
   page-navigation: true
