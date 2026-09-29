@@ -1,42 +1,56 @@
 ---
-title: "Welcome"
+title: "Ivy's Notebook!"
+subtitle: "A secret place..."
+page-layout: full
+toc: false
 ---
 
+Hi, I'm Ivy🩵
 
-Welcome to my online portfolio for COMP/STAT112 course taken at [Macalester College](https://www.macalester.edu/).  Please, use the side bar on the left for navigation.
+Welcome to my little corner on the internet~
 
-```{r}
-#| output: false
-#| echo: false
+This is a place where I will keep things I care about.
 
-packages <- c("wordcloud2", "here")
+## Recently
+
+I'm currently building this website. More coming soon :)
+
+```{=html}
+<div class="showcase">
+
+  <p class="showcase-small">Interested in my work?</p>
+
+  <div class="background-word">EXPLORE</div>
+
+  <div class="card-stack">
+
+    <a class="stack-card card-research" href="research.html">
+      <span class="stack-label">01</span>
+      <h3>Research</h3>
+      <p>Aging biology & senescence</p>
+    </a>
+
+    <a class="stack-card card-portfolio" href="portfolio.html">
+      <span class="stack-label">02</span>
+      <h3>Portfolio</h3>
+      <p>Data, design & visual work</p>
+    </a>
+
+    <a class="stack-card card-diary" href="diary.html">
+      <span class="stack-label">03</span>
+      <h3>Diary</h3>
+      <p>Things I want to remember</p>
+    </a>
+
+    <a class="stack-card card-about" href="about.html">
+      <span class="stack-label">04</span>
+      <h3>About</h3>
+      <p>A little bit about me</p>
+    </a>
+
+  </div>
+
+  <a class="contact-pill" href="about.html">Contact</a>
+
+</div>
 ```
-
-```{r}
-#| output: false
-#| echo: false
-
-install.packages(setdiff(packages, rownames(installed.packages())), repos = "http://cran.us.r-project.org")
-```
-
-```{r}
-#| output: false
-#| echo: false
-#| message: false
-
-lapply(packages, require, character.only = TRUE)
-```
-
-```{r}
-#| output: false
-#| echo: false
-
-ds <- read.csv(here("assets", "msg.csv"))
-```
-
-```{r}
-#| echo: false
-
-wordcloud2(data = ds, shape = "cardioid")
-```
-
