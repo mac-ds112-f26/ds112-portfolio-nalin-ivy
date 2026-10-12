@@ -447,6 +447,28 @@ ggplot(weather, aes(x = location, y = temp3pm)) +
 ```
 
 ```{r}
+p_box <- ggplot(weather, aes(x = location, y = temp3pm)) +
+  geom_boxplot() +
+  theme(
+    plot.background = element_rect(
+      fill = "transparent",
+      color = NA
+    )
+  )
+
+ggsave(
+  "../image/boxplot.png",
+  plot = p_box,
+  width = 8,
+  height = 6,
+  dpi = 300,
+  bg = "transparent"
+)
+```
+
+
+
+```{r}
 # How might we predict the 3pm temperature (temp3pm) by the 9am temperature (temp9am)?
 ggplot(weather, aes(y = temp3pm, x = temp9am)) +
   geom_point(color = "orange") +
@@ -531,6 +553,42 @@ ggplot(elections, aes(
   )
 
 ```
+```{r}
+p_ridge <- ggplot(elections, aes(
+  x = repub_pct_20,
+  y = fct_reorder(state_abbr, repub_pct_20),
+  fill = historical
+)) + 
+  geom_density_ridges(alpha = 0.5) +
+  labs(
+    x = "2020 Republican Support (%)",
+    y = "State"
+  ) +
+  theme(
+    plot.background = element_rect(
+      fill = "transparent",
+      color = NA
+    ),
+    legend.background = element_rect(
+      fill = "transparent",
+      color = NA
+    ),
+    legend.key = element_rect(
+      fill = "transparent",
+      color = NA
+    )
+  )
+
+ggsave(
+  "../image/ggridges.png",
+  plot = p_ridge,
+  width = 8,
+  height = 10,
+  dpi = 300,
+  bg = "transparent"
+)
+```
+(This is for saving a transparent image for my portfolio use)
 
 **Follow-up questions**
 

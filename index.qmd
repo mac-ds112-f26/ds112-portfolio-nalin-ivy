@@ -1,56 +1,347 @@
 ---
-title: "Ivy's Notebook!"
-subtitle: "A secret place..."
-page-layout: full
-toc: false
+pagetitle: "Ivy Lin"
+description: "Projects, places, and things I'm learning!"
+title-block-style: none
 ---
 
-Hi, I'm Ivy🩵
+<!--
+`<div>`: I use `<div>` to group related elements together. 
+#`<section>`: It represents a website section. Such as my dinasour section, and my traveling section.
+#`class=""`: I use classes to connect my HTML structure to css styling, b/ I love beautiful website...
+-->
 
-Welcome to my little corner on the internet~
+<div class="ivy-home">
 
-This is a place where I will keep things I care about.
+<section class="home-hero snap-selection">
 
-## Recently
+<div class="home-hero-left">
 
-I'm currently building this website. More coming soon :)
+<p class="eyebrow">
+A PERSONAL CABINET OF CURIOSITIES ✦
+</p>
 
-```{=html}
-<div class="showcase">
+<h1>
+Hi, I’m Ivy<span class="hero-star">🩵</span>
+</h1>
 
-  <p class="showcase-small">Interested in my work?</p>
+<p class="hero-main-line">
+Welcome to my website!
+</p>
 
-  <div class="background-word">EXPLORE</div>
+<p class="hero-description">
+Crystals, butterflies, fossils, research, music,
+movement, and everything in between.
+</p>
 
-  <div class="card-stack">
+<p class="hero-small">
+A little collection of things I study, make, collect,
+play with, and care about.
+</p>
 
-    <a class="stack-card card-research" href="research.html">
-      <span class="stack-label">01</span>
-      <h3>Research</h3>
-      <p>Aging biology & senescence</p>
-    </a>
+<div class="hero-links">
 
-    <a class="stack-card card-portfolio" href="portfolio.html">
-      <span class="stack-label">02</span>
-      <h3>Portfolio</h3>
-      <p>Data, design & visual work</p>
-    </a>
+<a href="portfolio.html">
+Explore my work ↗
+</a>
 
-    <a class="stack-card card-diary" href="diary.html">
-      <span class="stack-label">03</span>
-      <h3>Diary</h3>
-      <p>Things I want to remember</p>
-    </a>
-
-    <a class="stack-card card-about" href="about.html">
-      <span class="stack-label">04</span>
-      <h3>About</h3>
-      <p>A little bit about me</p>
-    </a>
-
-  </div>
-
-  <a class="contact-pill" href="about.html">Contact</a>
+<a href="about.html">
+A little about me
+</a>
 
 </div>
-```
+
+</div>
+
+<!--video display on Homepage-->
+
+<div class="home-slideshow"> <!--make a container on the outside- easier for
+css to select it-->
+
+<video class="home-slide home-slide-1"
+       autoplay muted loop playsinline>
+  <source src="image/ed-sheeran.mp4" type="video/mp4"> <!--src is source path-->
+</video>
+
+<video class="home-slide home-slide-2"
+       autoplay muted loop playsinline>
+  <source src="image/flowers.mp4" type="video/mp4">
+</video>
+
+<video class="home-slide home-slide-3"
+       autoplay muted loop playsinline>
+  <source src="image/sky.mp4" type="video/mp4">
+</video>
+
+<video class="home-slide home-slide-4"
+       autoplay muted loop playsinline>
+  <source src="image/spiderman.mp4" type="video/mp4">
+</video>
+
+<video class="home-slide home-slide-5"
+       autoplay muted loop playsinline>
+  <source src="image/dophin.mp4" type="video/mp4">
+</video>
+
+<video class="home-slide home-slide-6"
+       autoplay muted loop playsinline>
+  <source src="image/me.mp4" type="video/mp4">
+</video>
+
+<video class="home-slide home-slide-7"
+       autoplay muted loop playsinline>
+  <source src="image/painting.mp4" type="video/mp4">
+</video>
+
+<video class="home-slide home-slide-8"
+       autoplay muted loop playsinline>
+  <source src="image/river.mp4" type="video/mp4">
+</video>
+
+
+</div>
+
+</section>
+
+<!--COLLECTION INTRO-->
+
+<section class="new-collection-intro">
+
+<div class="new-collection-intro-inner">
+
+<p class="eyebrow">
+ON MY MIND / IN MY WORLD
+</p>
+
+<h2>
+A little<br>
+collection.
+</h2>
+
+<div class="new-collection-intro-bottom">
+
+<p>
+Projects, places, class work, and other things
+that have been taking up space in my brain lately.
+</p>
+
+<span>
+SCROLL TO EXPLORE ↓
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!--01 · DINO-->
+
+<section class="new-project-slide slide-dino">
+
+<div class="new-project-top">
+<span>01</span>
+<span>PROJECT</span>
+</div>
+
+<div class="new-project-title">
+DINO
+</div>
+
+<div class="new-project-bottom">
+
+<div>
+<h3>The dinosaur files.</h3>
+
+<p>
+Fossils, sauropods, pathology, and everything I'm learning along the way.
+</p>
+</div>
+
+<a href="dinosaur.html">Explore &#8599;</a>
+
+</div>
+
+</section>
+
+<!--02 · LA-->
+
+<section class="new-project-slide slide-la">
+
+<div class="new-project-top">
+
+<span>02</span>
+<span>TRAVEL</span>
+
+</div>
+
+
+<div class="new-project-title">
+LA
+</div>
+
+
+<div class="new-project-bottom">
+
+<div>
+
+<h3>Postcards from LA.</h3>
+
+<p>
+Places, photographs, and little memories
+from being somewhere new.
+</p>
+
+</div>
+
+
+<a href="la.html">
+Explore ↗
+</a>
+
+</div>
+
+</section>
+
+<!--03 · WORK-->
+
+<section class="new-project-slide slide-work">
+
+<div class="new-project-top">
+
+<span>03</span>
+<span>PORTFOLIO</span>
+
+</div>
+
+
+<div class="new-project-title">
+WORK
+</div>
+
+
+<div class="new-project-bottom">
+
+<div>
+
+<h3>Things I've made.</h3>
+
+<p>
+Data visualization, experiments,
+research, and work still in progress.
+</p>
+
+</div>
+
+
+<a href="portfolio.html">
+Explore ↗
+</a>
+
+</div>
+
+</section>
+
+<!--04 · STAT 112-->
+
+<section class="new-project-slide slide-stat">
+
+<div class="new-project-top">
+
+<span>04</span>
+<span>LEARNING</span>
+
+</div>
+
+
+<div class="new-project-title">
+R
+</div>
+
+
+<div class="new-project-bottom">
+
+<div>
+
+<h3>Learning by doing.</h3>
+
+<p>
+R experiments, visualization, maps,
+mistakes, fixes, and things that finally made sense.
+</p>
+
+</div>
+
+
+<a href="ica/index.html">
+Explore ↗
+</a>
+
+</div>
+
+</section>
+
+<!--05 · DIARY-->
+
+<section class="new-project-slide slide-diary">
+
+<div class="new-project-top">
+
+<span>05</span>
+<span>DIARY</span>
+
+</div>
+
+
+<div class="new-project-title">
+NOTE
+</div>
+
+
+<div class="new-project-bottom">
+
+<div>
+
+<h3>Life, collected.</h3>
+
+<p>
+Small moments, places, photographs,
+thoughts, and things I don't want to forget.
+</p>
+
+</div>
+
+
+<a href="diary.html">
+Explore ↗
+</a>
+
+</div>
+
+</section>
+
+<!--END NOTE-->
+
+<section class="new-home-ending">
+
+<span class="note-star">✦</span>
+
+<p class="eyebrow">
+THIS SPACE KEEPS GROWING
+</p>
+
+<h2>
+New projects.<br>
+New places.<br>
+New curiosities.
+</h2>
+
+<p>
+A personal collection of things I study,
+make, notice, and care about.
+</p>
+
+</section>
+
+
+</div>

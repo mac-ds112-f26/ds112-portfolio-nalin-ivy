@@ -114,6 +114,47 @@ ggplot(data = education, aes( x = expend, y = sat, color = salary)) +
   )
 ```
 
+```{r}
+p_scatter <- ggplot(data = education, aes(
+  x = expend,
+  y = sat,
+  color = salary
+)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Expend",
+    y = "SAT Scores",
+    color = "Salary"
+  ) +
+  theme(
+    plot.background = element_rect(
+      fill = "transparent",
+      color = NA
+    ),
+    legend.background = element_rect(
+      fill = "transparent",
+      color = NA
+    ),
+    legend.key = element_rect(
+      fill = "transparent",
+      color = NA
+    )
+  )
+
+ggsave(
+  "../image/scatter.png",
+  plot = p_scatter,
+  width = 8,
+  height = 6,
+  dpi = 300,
+  bg = "transparent"
+)
+
+```
+
+
+
 ### ✏️ Discretize Scale
 
 It can be tough to distinguish color scales and size scales for quantitative variables.
@@ -279,6 +320,34 @@ heatmap.2(plot_data,
   colsep = c(1:7), rowsep = (1:50), sepwidth = c(0.05, 0.05),
   sepcolor = "white", trace = "none"
 )
+
+png(
+  "../image/heatmap.png",
+  width = 1800,
+  height = 2200,
+  res = 200,
+  bg = "transparent"
+)
+
+par(bg = "transparent")
+
+heatmap.2(
+  plot_data,
+  dendrogram = "row",
+  Rowv = TRUE,
+  scale = "column",
+  keysize = 0.7,
+  density.info = "none",
+  col = hcl.colors(256, "Blue-Yellow 3"),
+  margins = c(8, 14),
+  colsep = c(1:7),
+  rowsep = c(1:50),
+  sepwidth = c(0.05, 0.05),
+  sepcolor = "white",
+  trace = "none"
+)
+
+dev.off()
 ```
 
 ### ✏️ Interpret Heat Maps

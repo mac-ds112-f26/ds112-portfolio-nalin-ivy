@@ -271,12 +271,36 @@ ggplot(hikes, aes(x = elevation)) +
   geom_histogram()
 ```
 
+```{r}
+#For my portfolio use...
+p_hist <- ggplot(hikes, aes(x = elevation)) +
+  geom_histogram() +
+  theme(
+    plot.background = element_rect(
+      fill = "transparent",
+      color = NA
+    )
+  )
+
+ggsave(
+  "../image/univariate.png",
+  plot = p_hist,
+  width = 8,
+  height = 6,
+  dpi = 300,
+  bg = "transparent"
+)
+```
+
+
+
 Comments: the code add a `geom_histogram()` so the thin lines changed to histogram.
 
 ```{r}
 # COMMENT on the change in the code and the corresponding change in the plot
 ggplot(hikes, aes(x = elevation)) +
   geom_histogram(color = "white") 
+
 ```
 
 Comments: the code add a `geom_histogram(color = "white")` changed the histogram to bars with outline with white color.

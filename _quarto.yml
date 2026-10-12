@@ -1,29 +1,16 @@
-# Creating Quarto Book
-# https://quarto.org/docs/books/
-#
-# options for Quarto book
-# https://quarto.org/docs/reference/projects/books.html
-#
-# Options for html
-# https://quarto.org/docs/reference/projects/websites.html#section
 
 project:
   type: website
   output-dir: docs
-  # resources:  # in case something was not included in rendered site automatically
-  #   - "data/*"
-  #   - "images/*"
-
-
-
-number-depth: 2
-
-
 
 website:
-  title: "Welcome to my little notebook!"
+  title: "🦕💕   How to raise a adult Rapetosaurus"
+  search: true
+  back-to-top-navigation: true
+
   navbar:
-    left:
+    background: light
+    right:
       - href: index.qmd
         text: Home
       - href: about.qmd
@@ -32,40 +19,31 @@ website:
         text: Portfolio
       - href: diary.qmd
         text: Diary
-      - href: ica
-        text: In-Class Activities
+      - text: STAT-112
+        menu:
+          - href: ica/index.qmd
+            text: In-Class Activities
+          - href: pcl/pcl.qmd
+            text: Pre-Class Learning
 
-  search: true
-  page-navigation: true
-  back-to-top-navigation: true
-  reader-mode: true
-
-  cookie-consent:
-    type: implied
-    style: simple
+  page-footer:
+    left: "© Ivy Lin"
+    right: "Made with curiosity."
 
 format:
   html:
-    theme:
-      light: flatly
-      dark: darkly
-    css: style/custom.css
-    toc: true
-    toc-depth: 3
-    link-external-newwindow: true
-    fontsize: 1em
-    smooth-scroll: true
-    code-overflow: scroll
-    code-copy: true
-    code-link: true
-    code-line-numbers: true
-    code-block-bg: true
-    code-block-border-left: "#1482FA"
-    code-tools: true
+    theme: cosmo
+    css:
+      - /style/custom.css
+      - /style/extra.css
+    toc: false
     page-layout: full
+    smooth-scroll: true
+    link-external-newwindow: true
+    code-copy: true
     code-fold: true
+    code-overflow: scroll
     number-sections: false
-    toc-expand: true
 
 execute:
   echo: true
