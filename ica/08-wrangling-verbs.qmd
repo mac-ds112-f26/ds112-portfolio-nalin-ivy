@@ -570,3 +570,5 @@ world_cup |>
 ### ✏️ Practice on Your Data
 
 Return to the TidyTuesday data you're using in Homework 3. Use your new wrangling skills to play around. What new insights can you gain?!
+
+
