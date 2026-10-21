@@ -1,0 +1,261 @@
+---
+pagetitle: "In-Class Activities"
+description: "A collection of my COMP/STAT 112 work."
+title-block-style: none
+---
+
+<div class="sq-page">
+
+<section class="sq-hero">
+
+<div class="sq-hero-left">
+
+<p class="sq-eyebrow">COMP / STAT 112</p>
+
+<h1>
+In Class Activities
+</h1>
+
+<p class="sq-intro">
+A collection of class work, visual experiments,
+and beautiful figures I learned so far.
+</p>
+
+</div>
+
+
+<div class="sq-hero-slideshow">
+
+<img class="hero-slide slide-1"
+     src="../image/univariate.png"
+     alt="Univariate visualization">
+
+<img class="hero-slide slide-2"
+     src="../image/facet_wrap.png"
+     alt="Facet wrap visualization">
+
+<img class="hero-slide slide-3"
+     src="../image/heatmap.png"
+     alt="Heatmap visualization">
+
+<img class="hero-slide slide-4"
+     src="../image/ggridges.png"
+     alt="Ridgeline visualization">
+
+<img class="hero-slide slide-5"
+     src="../image/scatter.png"
+     alt="Scatterplot visualization">
+
+<img class="hero-slide slide-6"
+     src="../image/scale_fill_manual.png"
+     alt="Density plot with manual fill colors">
+
+<img class="hero-slide slide-7"
+     src="../image/boxplot.png"
+     alt="Boxplot of temperature by location">
+
+</div>
+
+</section>
+
+
+<section class="sq-project">
+
+<div class="sq-project-meta">
+<span>03</span>
+<span>UNIVARIATE VISUALIZATION</span>
+</div>
+
+<div class="sq-project-grid">
+
+<div class="sq-project-visual visual-univariate">
+
+<img
+src="../image/univariate.png"
+alt="Histogram of hike elevation"
+class="sq-project-image">
+
+<div class="visual-label">ONE VARIABLE</div>
+
+</div>
+
+<div class="sq-project-copy">
+
+<p class="sq-small-label">FOUNDATIONS OF GGPLOT</p>
+
+<h2>Starting with one variable.</h2>
+
+<p>
+Bar charts, histograms, and density plots helped me understand
+how different types of variables need different visual approaches.
+This was also where I started getting comfortable with ggplot.
+</p>
+
+<a class="sq-button" href="03-univariate-viz-exercises.html">
+View activity ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="sq-project">
+
+<div class="sq-project-meta">
+<span>04</span>
+<span>BIVARIATE VISUALIZATION</span>
+</div>
+
+<div class="sq-project-grid reverse">
+
+<div class="sq-project-visual visual-bivariate">
+
+<img
+  src="../image/ggridges.png"
+  alt="Bivariate density plot"
+  class="sq-project-image">
+
+<div class="visual-label">TWO VARIABLES</div>
+
+</div>
+
+<div class="sq-project-copy">
+
+<p class="sq-small-label">RELATIONSHIPS</p>
+
+<h2>Looking at how variables move together.</h2>
+
+<p>
+This activity moved from individual variables to relationships:
+scatterplots, grouped distributions, boxplots, smooth trends,
+and different ways to compare two variables.
+</p>
+
+<a class="sq-button" href="04-bivariate-viz-exercises.html">
+View activity ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="sq-project">
+
+<div class="sq-project-meta">
+<span>05</span>
+<span>MULTIVARIATE VISUALIZATION</span>
+</div>
+
+<div class="sq-project-grid">
+
+<div class="sq-project-visual visual-multivariate">
+
+<img
+  src="../image/heatmap.png"
+  alt="multivariate heatmap"
+  class="sq-project-image">
+  
+<div class="visual-label">THREE + VARIABLES</div>
+
+</div>
+
+<div class="sq-project-copy">
+
+<p class="sq-small-label">ADDING COMPLEXITY</p>
+
+<h2>Adding another layer.</h2>
+
+<p>
+Color, shape, facets, heat maps, and star plots gave me more ways
+to show multiple variables at once without losing the main story.
+</p>
+
+<a class="sq-button" href="05-multivariate-viz.html">
+View activity ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="sq-project">
+
+<div class="sq-project-meta">
+<span>06</span>
+<span>SPATIAL VISUALIZATION</span>
+</div>
+
+<div class="sq-project-grid reverse">
+
+<div class="sq-project-visual visual-spatial">
+<div class="visual-label">MAPS</div>
+</div>
+
+<div class="sq-project-copy">
+
+<p class="sq-small-label">LOCATION + DATA</p>
+
+<h2>Putting data on a map.</h2>
+
+<p>
+Leaflet, point maps, contour maps, and choropleths introduced
+a different way to think about data: not only what happened,
+but where.
+</p>
+
+<a class="sq-button" href="06-spatial-viz.html">
+View activity ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="sq-next">
+
+<div>
+<p class="sq-eyebrow">STILL GROWING</p>
+
+<h2>
+More work will<br>
+live here soon.
+</h2>
+</div>
+
+<div class="sq-next-copy">
+
+<p>
+Effective visualization, wrangling,
+and whatever comes next.
+</p>
+
+<p>
+This page will keep growing as the semester continues.
+</p>
+
+</div>
+
+</section>
+
+
+<footer class="sq-footer">
+
+<a href="../index.html">← Home</a>
+
+<span>COMP / STAT 112 · FALL 2026</span>
+
+</footer>
+
+</div>
