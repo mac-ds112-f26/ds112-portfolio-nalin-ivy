@@ -15,6 +15,7 @@ Consider data on a sleep study in which subjects received only 3 hours of sleep 
 sleep_wide <- read.csv("https://mac-stat.github.io/data/sleep_wide.csv")
 
 head(sleep_wide)
+library(tidyverse)
 ```
 
 What are the units of observation in `sleep_wide`?
