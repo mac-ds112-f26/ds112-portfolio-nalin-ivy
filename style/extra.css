@@ -1,0 +1,575 @@
+/*01 · PRE-CLASS LEARNING*/
+
+.pcl-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.5rem 0 6rem;
+}
+
+
+/* Page title */
+.pcl-page h1 {
+  margin-bottom: 0 0 0.5rem;
+}
+
+
+/* Intro paragraph */
+
+.pcl-page > p {
+  margin-bottom: 3rem;
+  color: #6f6a65;
+  line-height: 1.7;
+}
+
+
+/* Section headings */
+
+.pcl-page h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+
+/* Mind map images */
+
+.pcl-page img {
+  display: block;
+  width: 82%;
+  height: auto;
+  margin:
+    0
+    auto
+    3rem;
+  padding: 1rem;
+  border-radius: 28px;
+  background: #faf8f5;
+  box-shadow:
+    0 14px 34px
+    rgba(0, 0, 0, 0.06);
+  cursor: zoom-in;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Mind map hover */
+
+.pcl-page img:hover {
+  transform:
+    translateY(-8px)
+    scale(1.025);
+  box-shadow:
+    0 22px 46px
+    rgba(0, 0, 0, 0.14);
+}
+
+
+/* Remove Quarto blue anchor icon */
+
+.pcl-page .anchorjs-link {
+  display: none !important;
+}
+
+
+
+/*02 · PCL TABLE OF CONTENTS*/
+
+#TOC {
+  font-size: 0.88rem;
+}
+
+#TOC .toc-title {
+  margin-bottom: 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a847e;
+}
+
+/*`#TOC` means to find the id which name is TOC*/
+#TOC a {
+  color: #67615c;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+
+#TOC a:hover {
+  color: #222;
+  padding-left: 0.25rem;
+}
+
+#TOC .active {
+  color: #222;
+  font-weight: 600;
+}
+
+
+
+/*03 · HOMEPAGE SCROLL SNAP
+This does NOT redesign the existing hero.*/
+
+/*Only activate scroll snapping on a page that contains the new project slides.*/
+
+@media (min-width: 801px) {
+  html:has(.new-project-slide) {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+
+  /*
+  Hero keeps its current design.
+  This only makes it a stopping point.
+  */
+
+  .home-hero {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .new-collection-intro,
+  .new-project-slide,
+  .new-home-ending {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+}
+
+
+
+/*04 · COLLECTION INTRO*/
+
+.new-collection-intro {
+  min-height:
+    calc(100vh - 70px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding:
+    6rem
+    8vw;
+  background: #ffffff;
+}
+
+
+.new-collection-intro-inner {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+
+/* Small eyebrow */
+
+.new-collection-intro .eyebrow {
+  margin:
+    0
+    0
+    2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+
+/* A little collection */
+
+.new-collection-intro h2 {
+  margin: 0;
+  max-width: 950px;
+  font-size:
+    clamp(
+      5rem,
+      9vw,
+      9rem
+    );
+
+  line-height: 0.88;
+  letter-spacing: -0.06em;
+  color: #202124;
+}
+
+
+/* Bottom section */
+
+.new-collection-intro-bottom {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top:
+    1px solid #dedbd7;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 4rem;
+}
+
+
+.new-collection-intro-bottom p {
+  max-width: 540px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #6f6a65;
+}
+
+
+/* Scroll to explore */
+
+.new-collection-intro-bottom span {
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #99938d;
+}
+
+
+/* No blue Quarto anchor */
+.new-collection-intro .anchorjs-link {
+  display: none !important;
+}
+
+/*05 · FULL PAGE PROJECT SLIDES*/
+.new-project-slide {
+  min-height:
+    calc(100vh - 70px);
+  box-sizing: border-box;
+  padding:
+    4rem
+    8vw;
+  display: grid;
+  grid-template-rows:
+    auto
+    1fr
+    auto;
+  overflow: hidden;
+}
+
+/*Number + category*/
+.new-project-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+
+
+/*Giant DINO / LA / WORK / R / NOTE*/
+
+.new-project-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+
+  font-size:
+    clamp(
+      8rem,
+      20vw,
+      20rem
+    );
+
+  font-weight: 750;
+
+  line-height: 0.72;
+
+  letter-spacing: -0.075em;
+
+  color: #111111;
+}
+
+
+
+/*Bottom description area*/
+
+.new-project-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 4rem;
+
+  padding-top: 2rem;
+
+  border-top:
+    1px solid
+    rgba(0, 0, 0, 0.2);
+}
+
+
+.new-project-bottom h3 {
+  margin:
+    0
+    0
+    0.7rem;
+
+  font-size: 1.7rem;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.new-project-bottom p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 1rem;
+
+  line-height: 1.65;
+
+  color:
+    rgba(0, 0, 0, 0.7);
+}
+
+
+
+/*Explore link*/
+
+.new-project-bottom a {
+  display: inline-block;
+
+  flex-shrink: 0;
+
+  color: #111;
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  padding-bottom: 0.25rem;
+
+  border-bottom:
+    1px solid #111;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+.new-project-bottom a:hover {
+  transform:
+    translateX(6px);
+
+  opacity: 0.55;
+}
+
+
+
+/*06 · PROJECT COLORS*/
+
+
+/* DINO */
+
+.slide-dino {
+  background: rgba(185, 206, 226, 0.3);
+}
+
+
+/* LA */
+
+.slide-la {
+  background: rgba(223, 189, 202, 0.3);
+}
+
+
+/* WORK */
+
+.slide-work {
+  background: rgba(229, 215, 144, 0.3);
+}
+
+
+/* STAT 112 */
+
+.slide-stat {
+  background: rgba(186, 208, 174, 0.3);
+}
+
+
+/* DIARY */
+
+.slide-diary {
+  background: rgba(223, 150, 149, 0.3);
+}
+
+/*07 · HOMEPAGE ENDING*/
+
+.new-home-ending {
+  min-height:
+    calc(100vh - 70px);
+  box-sizing: border-box;
+  padding:
+    8rem
+    10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f6f3ee;
+}
+
+
+.new-home-ending .note-star {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.new-home-ending .eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.new-home-ending h2 {
+  margin:
+    1.5rem
+    0
+    3rem;
+  max-width: 1000px;
+  font-size:
+    clamp(
+      4rem,
+      8vw,
+      8rem
+    );
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+
+.new-home-ending > p:last-child {
+  max-width: 480px;
+  margin:
+    0
+    0
+    0
+    auto;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #706b66;
+}
+
+
+
+/*08 · MOBILE*/
+@media (max-width: 800px) {
+
+  /*PCL*/
+  .pcl-page {
+    padding:
+      1rem
+      0
+      4rem;
+  }
+
+
+  .pcl-page h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+
+  .pcl-page img {
+    width: 96%;
+    padding: 0.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 18px;
+  }
+
+
+
+  /*Collection intro*/
+
+  .new-collection-intro {
+    min-height: auto;
+    padding:
+      5rem
+      1.5rem;
+  }
+
+  .new-collection-intro h2 {
+    font-size:
+      clamp(
+        4rem,
+        18vw,
+        6rem
+      );
+  }
+
+  .new-collection-intro-bottom {
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  /*Project slides*/
+
+  .new-project-slide {
+    min-height: 85vh;
+    padding:
+      3rem
+      1.5rem;
+  }
+
+  .new-project-title {
+    font-size:
+      clamp(
+        6rem,
+        30vw,
+        10rem
+      );
+  }
+
+  .new-project-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  /*Ending*/
+
+  .new-home-ending {
+    min-height: auto;
+    padding:
+      6rem
+      1.5rem;
+  }
+
+  .new-home-ending h2 {
+    font-size:
+      clamp(
+        3.5rem,
+        15vw,
+        6rem
+      );
+  }
+
+  .new-home-ending > p:last-child {
+    margin-left: 0;
+  }
+}
+
+
+

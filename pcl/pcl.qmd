@@ -1,11 +1,47 @@
 ---
-title: "Pre-Class Learning Summaries"
+pagetitle: "Pre-Class Learning"
+description: "My COMP/STAT 112 pre-class learning summaries."
+title-block-style: none
+
+toc: true
+toc-location: right
+toc-title: "Pre-Class Learning"
+toc-depth: 2
 ---
 
-## R
+::: {.pcl-page}
 
-![](0808-r.png)
+# Pre-Class Learning Summaries
 
-## Quarto
+A collection of the mind maps I made before class to organize what I was learning.
 
-![from qmd4sci.njtierney.com](0810-quarto.jpeg)
+## 01 · Introduction to Data Science
+
+[![](Introduction_to_Data_Science.png){width=90%}](Introduction_to_Data_Science.png){target="_blank"}
+
+
+## 02 · RStudio + HW1
+
+[![](RStudio_HW1.png){width=90%}](RStudio_HW1.png){target="_blank"}
+
+
+## 03 · Univariate Visualization
+
+[![](Univariate_Visualization.png){width=90%}](Univariate_Visualization.png){target="_blank"}
+
+
+## 04 · Bivariate Visualization
+
+[![](Bivariate_Visualization.png){width=90%}](Bivariate_Visualization.png){target="_blank"}
+
+
+## 05 · Multivariate Visualization
+
+[![](Multivariate_Visualization.png){width=90%}](Multivariate_Visualization.png){target="_blank"}
+
+
+## 06 · Spatial Visualization
+
+[![](Spatial_Visualization.png){width=90%}](Spatial_Visualization.png){target="_blank"}
+
+:::

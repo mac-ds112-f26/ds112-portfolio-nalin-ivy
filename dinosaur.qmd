@@ -1,0 +1,18 @@
+---
+title: "Dinosaurs_Rapetosaurus🦕"
+format: html
+---
+
+## About this project
+
+The Mahajanga Basin Project: Late Cretaceous Vertebrates from Madagascar and Their Implications for the Biogeographic History of Gondwana.
+
+## My process
+
+[More pictures will come up soon...]
+
+## What I learned
+
+[Dinosaurs didn't have kneecaps...]
+
+[← Back home](index.qmd)

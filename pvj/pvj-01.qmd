@@ -1,5 +1,78 @@
 ---
-title: "Personal Visualization Journey"
+title: "Seven Years of Music_My Listening Journey"
+subtitle: "How my music habit changed from 2019 to 2025"
+format: html
+execute:
+  echo: true
+  warning: false
 ---
 
-Add content here
+```{r}
+library(tidyverse)
+
+annual <- read_csv("my_annual_songs_report.csv")
+songs <- read_csv("my_top10_songs.csv")
+```
+## My Listening Habit
+
+```{r}
+ggplot(annual, aes(x = annual_song_count,
+                   y = listening_hours,
+                   color = factor(year))) +
+  geom_point(size = 5) +
+  geom_text(aes(label = year), vjust = -1) +
+  labs(
+    title = "More Songs, Less Time?",
+    x = "Number of Songs",
+    y = "Listening Hours",
+    color = "Year"
+  )
+```
+## My Language Preferences
+
+```{r}
+ggplot(songs, aes(x = factor(year),
+                  fill = language)) +
+  geom_bar(position = "fill") +
+  coord_flip() +
+  scale_fill_manual(values = c(
+    "Chinese" = "lightpink",
+    "English" = "blue",
+    "Japanese" = "lightgreen",
+    "French" = "yellow",
+    "Spanish" = "orange"
+  )) +
+  labs(
+    title = "The Languages of My Music",
+    x = "Year",
+    y = "Proportion",
+    fill = "Language"
+  ) +
+  theme_minimal()
+```
+
+## My Top 10 Songs Across Seven Years
+
+```{r}
+ggplot(songs, aes(x = rank,
+                  y = factor(year),
+                  fill = language)) +
+  geom_tile(width = 0.85, height = 0.85, color = "white") +
+  scale_x_continuous(breaks = 1:10) +
+  scale_fill_manual(values = c(
+    "Chinese" = "lightpink",
+    "English" = "blue",
+    "Japanese" = "lightgreen",
+    "French" = "yellow",
+    "Spanish" = "orange"
+  )) +
+  labs(
+    title = "Seven Years",
+    subtitle = "The changing languages of my annual Top 10 songs",
+    x = "Song Ranking",
+    y = "Year",
+    fill = "Language",
+    caption = "NetEase Cloud Music Annual Reports"
+  ) +
+  theme_minimal()
+```
