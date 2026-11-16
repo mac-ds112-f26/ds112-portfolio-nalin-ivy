@@ -1,0 +1,96 @@
+---
+title: "Exam 2"
+author: Ivy
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(lubridate)
+
+nba <- read_csv("../data/regular_season_totals_2010_2024.csv")
+```
+
+```{r}
+nba <- nba |>
+  mutate(
+    GAME_DATE = as.Date(GAME_DATE, format = "%Y-%m-%dT%H:%M:%S")
+  )
+```
+
+```{r}
+class(nba$GAME_DATE)
+sum(is.na(nba$GAME_DATE))
+```
+```{r}
+nba <- nba |>
+  mutate(
+    Weekday = wday(GAME_DATE, label = TRUE, week_start = 1)
+  )
+count(nba, Weekday)
+```
+```{r}
+nba_five <- nba |>
+  filter(TEAM_NAME %in% c(
+    "Boston Celtics",
+    "Golden State Warriors",
+    "Los Angeles Lakers",
+    "Miami Heat",
+    "Minnesota Timberwolves"
+  ))
+
+count(nba_five, TEAM_NAME)
+```
+```{r}
+nba_five |>
+  group_by(TEAM_NAME, Weekday) |>
+  summarize(
+    Games = n()
+  )
+```
+# Do NBA teams perform differently on different days of the week?
+
+```{r}
+weekday_performance <- nba_five |>
+  group_by(TEAM_NAME, Weekday) |>
+  summarize(
+    Average_PM = mean(PLUS_MINUS, na.rm = TRUE),
+    SD_PM = sd(PLUS_MINUS, na.rm = TRUE),
+    Games = n()
+  )
+
+weekday_performance
+```
+# Figure 1 — Average Performance
+```{r}
+ggplot(
+  weekday_performance,
+  aes(x = Weekday, y = Average_PM)
+) +
+  geom_col(fill = "blue") +
+  facet_wrap(~ TEAM_NAME) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(
+    title = "Average NBA Point Differential by Weekday",
+    x = "Day of the Week",
+    y = "Average Point Differential"
+  ) +
+  theme_minimal()
+```
+# Figure 2 — Performance Distribution
+```{r}
+ggplot(
+  nba_five,
+  aes(x = Weekday, y = PLUS_MINUS)
+) +
+  geom_boxplot(fill = "yellow", alpha = 0.7) +
+  facet_wrap(~ TEAM_NAME) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  labs(
+    title = "Distribution of NBA Point Differentials by Weekday",
+    x = "Day of the Week",
+    y = "Point Differential"
+  ) +
+  theme_minimal()
+```
+

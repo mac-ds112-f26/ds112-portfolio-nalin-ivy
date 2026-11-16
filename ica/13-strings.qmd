@@ -182,6 +182,7 @@ Notice that these are the exact same section! In order to not double count an in
 # That's fine because we won't use this to analyze department enrollments!
  enrollments_2 |>
    filter(instructor == "Brianna Heggeseth", name == "Introduction to Data Science")
+ 
 ```
 
 *Now*, explore enrollments by instructor. *You* decide what research questions to focus on. Use both visual and numerical summaries.
@@ -281,6 +282,7 @@ examples <- c(example, example2, example3)
 pat <- "[^aeiouAEIOU ]{3}" # Regular expression for three straight consonants. Note that I've excluded spaces as well
 
 str_detect(examples, pat) # TRUE/FALSE if it detects pattern
+
 ```
 
 ```{r}

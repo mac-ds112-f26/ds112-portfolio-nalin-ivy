@@ -29,12 +29,15 @@ ggplot(annual, aes(x = annual_song_count,
   )
 ```
 ## My Language Preferences
-
 ```{r}
+
 ggplot(songs, aes(x = factor(year),
                   fill = language)) +
   geom_bar(position = "fill") +
   coord_flip() +
+  scale_y_continuous(
+    labels = scales::percent
+  ) +
   scale_fill_manual(values = c(
     "Chinese" = "lightpink",
     "English" = "blue",
@@ -44,12 +47,57 @@ ggplot(songs, aes(x = factor(year),
   )) +
   labs(
     title = "The Languages of My Music",
+    subtitle = "Language distribution among my annual Top 10 songs",
     x = "Year",
-    y = "Proportion",
-    fill = "Language"
+    y = "Percentage of Songs",
+    fill = "Language",
+    caption = "Source: NetEase Cloud Music Annual Reports"
   ) +
   theme_minimal()
+
 ```
+
+
+
+```{r}
+
+# Show how my total listening time changed each year (Annual listening hours)
+
+ggplot(annual, aes(x = year, y = listening_hours)) +
+  geom_line(color = "blue", linewidth = 1) +
+  geom_point(color = "blue", size = 3) +
+  geom_text(aes(label = listening_hours), vjust = -1) +
+  scale_x_continuous(breaks = 2019:2025) +
+  labs(
+    title = "My Listening Hours Over Seven Years",
+    subtitle = "Annual listening time from 2019 to 2025",
+    x = "Year",
+    y = "Listening Hours"
+  ) +
+  theme_minimal()
+
+```
+
+```{r}
+
+# Show how the number of songs I listened to changed each year
+
+ggplot(annual, aes(x = year, y = annual_song_count)) +
+  geom_line(color = "darkorange", linewidth = 1) +
+  geom_point(color = "darkorange", size = 3) +
+  geom_text(aes(label = annual_song_count), vjust = -1) +
+  scale_x_continuous(breaks = 2019:2025) +
+  labs(
+    title = "The Number of Songs I Listened to",
+    subtitle = "Annual song count from 2019 to 2025",
+    x = "Year",
+    y = "Number of Songs"
+  ) +
+  theme_minimal()
+
+```
+
+
 
 ## My Top 10 Songs Across Seven Years
 
